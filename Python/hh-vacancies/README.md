@@ -11,5 +11,4 @@
 - API Центробанка РФ
 
 ## Запуск
-1. Установите зависимости: `pip install -r requirements.txt`
-2. Запустите Jupyter Notebook: `jupyter notebook notebooks/analysis.ipynb`
+1. Запустите Jupyter Notebook: `hh-vacancies.ipynb`
