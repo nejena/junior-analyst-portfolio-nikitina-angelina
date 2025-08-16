@@ -15,6 +15,3 @@
 2. Откройте файл `hh-vacancies-dashboard.pbix`.  
 3. Для просмотра трансформаций — откройте Power Query (Transform Data).
 
-Ключевые метрики
-
-
