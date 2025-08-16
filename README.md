@@ -11,7 +11,7 @@
 ## Проекты
 
 ### Power BI
-- **HR аналитика: дашборды для рекрутера, соискателя, руководителя отдела**: 
+- **HR аналитика: дашборды для рекрутера, соискателя, руководителя отдела**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/tree/main/dashboards/hh-vacancies-dashboard
 
 
 
