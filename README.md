@@ -14,7 +14,7 @@
 - **HR аналитика: дашборды для рекрутера, соискателя, руководителя отдела**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/tree/main/dashboards/hh-vacancies-dashboard
 
 ### SQL 
-- ** Анализ данных Airbnb. 
+- **Анализ данных Airbnb**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/blob/main/sql/airbnb_analysis/README.md
 Демонстрация навыков: оконные функции, CTE, сложные JOIN, агрегация.
 
 ## Контакты
