@@ -1,7 +1,5 @@
 # SQL Анализ данных Airbnb
 
-[![SQL](https://img.shields.io/badge/SQL-Expert-blue)](https://sql-academy.org)
-
 Аналитические SQL-запросы для учебной базы данных Airbnb. Запросы тестировались на платформе [sql-academy.org](https://sql-academy.org/ru/sandbox).
 
 ## Схема базы данных
