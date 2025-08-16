@@ -13,7 +13,9 @@
 ### Power BI
 - **HR аналитика: дашборды для рекрутера, соискателя, руководителя отдела**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/tree/main/dashboards/hh-vacancies-dashboard
 
-
+### SQL 
+- ** Анализ данных Airbnb. 
+Демонстрация навыков: оконные функции, CTE, сложные JOIN, агрегация.
 
 ## Контакты
 - LinkedIn: 
