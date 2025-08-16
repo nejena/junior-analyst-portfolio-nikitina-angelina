@@ -1,0 +1,167 @@
+# SQL Анализ данных Airbnb
+
+Аналитические SQL-запросы для учебной базы данных Airbnb. Запросы тестировались на платформе [sql-academy.org](https://sql-academy.org/ru/sandbox).
+
+## Схема базы данных
+<img width="1873" height="1014" alt="image" src="https://github.com/user-attachments/assets/8243d74e-4078-4710-8ab1-8895e771a006" />
+
+
+---
+
+## Задание 1: Активные пользователи
+**Задача:** Вернуть пользователей с >1 бронированием, с указанием первой/последней даты бронирования и общей стоимости.
+
+```sql
+SELECT u.id AS user_id,
+	u.name,
+	COUNT(r.id) AS booking_count,
+	MIN(r.start_date) AS first_booking_date,
+	MAX(r.start_date) AS last_booking_date,
+	SUM(r.price) AS total_booking_cost
+FROM Users u
+	JOIN Reservations r ON u.id = r.user_id
+GROUP BY u.id,
+	u.name
+HAVING COUNT(r.id) > 1
+ORDER BY booking_count DESC,
+	total_booking_cost DESC;
+```
+
+**Особенности решения:**
+- Использование `JOIN` для связи пользователей и бронирований
+- Фильтрация групп с помощью `HAVING`
+- Сортировка по нескольким столбцам
+
+---
+
+## Задание 2: Годовая выручка (накопительный итог)
+**Задача:** Рассчитать годовую выручку с накопительным итогом.
+
+**Вариант с CTE и подзапросом:**
+```sql
+WITH yearly_totals AS (
+	SELECT EXTRACT(
+			YEAR
+			FROM r.start_date
+		) AS booking_year,
+		SUM(r.price) AS year_total
+	FROM Reservations r
+	GROUP BY EXTRACT(
+			YEAR
+			FROM r.start_date
+		)
+)
+SELECT yt1.booking_year,
+	yt1.year_total,
+	(
+		SELECT SUM(yt2.year_total)
+		FROM yearly_totals yt2
+		WHERE yt2.booking_year <= yt1.booking_year
+	) AS cumulative_total
+FROM yearly_totals yt1
+ORDER BY yt1.booking_year;
+```
+
+**Вариант с оконной функцией (более оптимальный):**
+```sql
+SELECT EXTRACT(
+		YEAR
+		FROM r.start_date
+	) AS booking_year,
+	SUM(r.price) AS year_total,
+	SUM(SUM(r.price)) OVER (
+		ORDER BY EXTRACT(
+				YEAR
+				FROM r.start_date
+			)
+	) AS cumulative_total
+FROM Reservations r
+GROUP BY EXTRACT(
+		YEAR
+		FROM r.start_date
+	)
+ORDER BY booking_year;
+```
+
+**Сравнение подходов:** Оконные функции обеспечивают лучшую производительность на больших данных.
+
+---
+
+## Задание 3: Жильё с низким рейтингом
+**Задача:** Найти жильё со средним рейтингом <= 2
+
+```sql
+SELECT rm.id AS room_id,
+	rm.home_type,
+	rm.address,
+	rm.price,
+	AVG(rv.rating) AS average_rating
+FROM Rooms rm
+	JOIN Reservations r ON rm.id = r.room_id
+	JOIN Reviews rv ON r.id = rv.reservation_id
+GROUP BY rm.id,
+	rm.home_type,
+	rm.address,
+	rm.price
+HAVING AVG(rv.rating) <= 2
+```
+
+**Особенности:** 
+- Множественные `JOIN` для связи таблиц
+- Использование `HAVING` для фильтрации по агрегатной функции
+
+---
+
+## Задание 4: Распределение рейтингов
+**Задача:** Рассчитать процентное распределение оценок
+
+```sql
+WITH rating_counts AS (
+	SELECT rating,
+		COUNT(*) AS count_ratings
+	FROM Reviews
+	GROUP BY rating
+),
+total AS (
+	SELECT COUNT(*) AS total_ratings
+	FROM Reviews
+)
+SELECT rc.rating,
+	rc.count_ratings,
+	ROUND((rc.count_ratings * 100.0 / t.total_ratings), 2) AS percentage
+FROM rating_counts rc
+	CROSS JOIN total t
+ORDER BY rc.rating;
+```
+
+---
+
+## Задание 5: Средняя длительность пребывания
+**Задача:** Рассчитать среднюю длительность пребывания по жилью
+
+```sql
+SELECT rm.id AS room_id,
+	rm.home_type,
+	rm.address,
+	ROUND(
+		COALESCE(AVG(DATEDIFF(r.end_date, r.start_date)), 0),
+		0
+	) AS average_stay_duration_days
+FROM Rooms rm
+	LEFT JOIN Reservations r ON rm.id = r.room_id
+GROUP BY rm.id,
+	rm.home_type,
+	rm.address
+ORDER BY average_stay_duration_days DESC;
+```
+
+**Особенности:**
+- Использование `LEFT JOIN` для включения жилья без бронирований
+- Обработка NULL через `COALESCE`
+- Расчет длительности с помощью `DATEDIFF`
+
+---
+
+## Валидация запросов
+Все запросы были протестированы на платформе sql-academy.org:
+[Открыть пример в песочнице SQL Academy](https://sql-academy.org/sandbox?share=c3FsPVNFTEVDVCt1LmlkK0FTK3VzZXJfaWQlMkMlMEElMDl1Lm5hbWUlMkMlMEElMDlDT1VOVCUyOHIuaWQlMjkrQVMrYm9va2luZ19jb3VudCUyQyUwQSUwOU1JTiUyOHIuc3RhcnRfZGF0ZSUyOStBUytmaXJzdF9ib29raW5nX2RhdGUlMkMlMEElMDlNQVglMjhyLnN0YXJ0X2RhdGUlMjkrQVMrbGFzdF9ib29raW5nX2RhdGUlMkMlMEElMDlTVU0lMjhyLnByaWNlJTI5K0FTK3RvdGFsX2Jvb2tpbmdfY29zdCUwQUZST00rVXNlcnMrdSUwQSUwOUpPSU4rUmVzZXJ2YXRpb25zK3IrT04rdS5pZCslM0Qrci51c2VyX2lkJTBBR1JPVVArQlkrdS5pZCUyQyUwQSUwOXUubmFtZSUwQUhBVklORytDT1VOVCUyOHIuaWQlMjkrJTNFKzElMEFPUkRFUitCWStib29raW5nX2NvdW50K0RFU0MlMkMlMEElMDl0b3RhbF9ib29raW5nX2Nvc3QrREVTQyUzQiZkYXRhYmFzZT00ZWQyYjgwOWQ3NDQ2YjlhMGUxMDAwMDQmZGJtcz1teXNxbA%3D%3D)
