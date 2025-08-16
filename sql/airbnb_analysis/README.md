@@ -1,5 +1,8 @@
 # SQL Анализ данных Airbnb
 
+**Выполнено в рамках тестового задания для BioCad**  
+[![BioCad](https://img.shields.io/badge/Test_Task-BioCad-0474B4?style=flat&logo=databricks&logoColor=white)](https://biocad.ru)
+
 Аналитические SQL-запросы для учебной базы данных Airbnb. Запросы тестировались на платформе [sql-academy.org](https://sql-academy.org/ru/sandbox).
 
 ## Схема базы данных
