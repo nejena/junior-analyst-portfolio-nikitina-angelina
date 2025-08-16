@@ -3,7 +3,8 @@
 Аналитические SQL-запросы для учебной базы данных Airbnb. Запросы тестировались на платформе [sql-academy.org](https://sql-academy.org/ru/sandbox).
 
 ## Схема базы данных
-![ERD Airbnb](https://sql-academy.org/static/images/schema_ru.png)
+<img width="1873" height="1014" alt="image" src="https://github.com/user-attachments/assets/8243d74e-4078-4710-8ab1-8895e771a006" />
+
 
 ---
 
