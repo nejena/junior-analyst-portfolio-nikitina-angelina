@@ -13,6 +13,7 @@
 
 ### Power BI
 - **HR аналитика: дашборды для рекрутера, соискателя, руководителя отдела**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/tree/main/dashboards/hh-vacancies-dashboard
+- **Кинотека в вашем стиле: создаем сервис с идеальным трекингом, рейтингами и комментариями**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/tree/main/dashboards/movie-catalog-survey-analysis
 
 ### SQL 
 - **Анализ данных Airbnb**: https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/blob/main/sql/airbnb_analysis/README.md
