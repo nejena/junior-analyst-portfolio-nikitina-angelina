@@ -31,12 +31,14 @@
 Поскольку прямая интеграция с Power BI в настоящее время затруднена, ключевые визуализации представлены в виде скриншотов в папке images.
 
 ### Страница 1
-https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/blob/main/dashboards/movie-catalog-survey-analysis/images/Movie%20Catalog%20Survey%20Analysis-1.png
+
+<img width="1328" height="768" alt="Movie Catalog Survey Analysis-1" src="https://github.com/user-attachments/assets/dfad8de2-7eae-40f4-8fcd-efe06f5047d8" />
 **Рис. 1.** Movie Catalog — страница 1
 
 ### Страница 2
 https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/blob/main/dashboards/movie-catalog-survey-analysis/images/Movie%20Catalog%20Survey%20Analysis-1.png
 **Рис. 2.** Movie Catalog — страница 2
+<img width="1328" height="768" alt="Movie Catalog Survey Analysis-1" src="https://github.com/user-attachments/assets/283fd8a4-9e69-4e83-93f9-ae6bbff597db" />
 
 
 ## Выводы
