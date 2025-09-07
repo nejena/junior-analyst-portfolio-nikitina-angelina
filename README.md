@@ -4,10 +4,10 @@
 Сертификаты пройденных курсов на Stepik'е: https://stepik.org/users/408014232/certificates
 
 ## Навыки
-- Анализ данных в Excel (Power Query, Power Pivot, DAX, Power BI)
-- Программирование на Python (скрипты, визуализация)
 - Визуализация в Tableau, Power BI
+- Анализ данных в Excel (Power Query, Power Pivot, DAX, Power BI)
 - SQL
+- Программирование на Python (скрипты, визуализация)
 
 ## Проекты
 
