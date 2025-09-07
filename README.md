@@ -5,7 +5,7 @@
 
 ## Навыки
 - Анализ данных в Excel (Power Query, Power Pivot, DAX, Power BI)
-- Программирование на Python (парсинг, визуализация)
+- Программирование на Python (скрипты, визуализация)
 - Визуализация в Tableau, Power BI
 - SQL
 
