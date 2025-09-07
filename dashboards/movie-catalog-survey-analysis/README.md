@@ -31,11 +31,11 @@
 Поскольку прямая интеграция с Power BI в настоящее время затруднена, ключевые визуализации представлены в виде скриншотов в папке images.
 
 ### Страница 1
-![Страница 1](dashboards/movie-catalog-survey-analysis/images/Movie Catalog Survey Analysis-1.png)
+dashboards/movie-catalog-survey-analysis/images/Movie Catalog Survey Analysis-1.png
 **Рис. 1.** Movie Catalog — страница 1
 
 ### Страница 2
-![Страница 2](dashboards/movie-catalog-survey-analysis/images/Movie Catalog Survey Analysis-2.png)
+dashboards/movie-catalog-survey-analysis/images/Movie Catalog Survey Analysis-2.png
 **Рис. 2.** Movie Catalog — страница 2
 
 
