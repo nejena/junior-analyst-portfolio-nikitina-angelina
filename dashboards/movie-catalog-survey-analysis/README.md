@@ -31,15 +31,10 @@
 Поскольку прямая интеграция с Power BI в настоящее время затруднена, ключевые визуализации представлены в виде скриншотов в папке images.
 
 ### Страница 1
-
-<img width="1328" height="768" alt="Movie Catalog Survey Analysis-1" src="https://github.com/user-attachments/assets/dfad8de2-7eae-40f4-8fcd-efe06f5047d8" />
-**Рис. 1.** Movie Catalog — страница 1
+<img width="1328" height="768" alt="Movie Catalog Survey Analysis-1" src="https://github.com/user-attachments/assets/4961402a-d196-410e-b00f-df72bdd48634" />
 
 ### Страница 2
-https://github.com/nejena/junior-analyst-portfolio-nikitina-angelina/blob/main/dashboards/movie-catalog-survey-analysis/images/Movie%20Catalog%20Survey%20Analysis-1.png
-**Рис. 2.** Movie Catalog — страница 2
-<img width="1328" height="768" alt="Movie Catalog Survey Analysis-1" src="https://github.com/user-attachments/assets/283fd8a4-9e69-4e83-93f9-ae6bbff597db" />
-
+<img width="1328" height="768" alt="Movie Catalog Survey Analysis-2" src="https://github.com/user-attachments/assets/260ee6f6-d086-42c6-b228-6c4230340013" />
 
 ## Выводы
 Большинство респондентов выбрали средние и высокие значения (3–5), что указывает на то, что возможность оставлять собственные отзывы и оценки является для них заметно важной. При этом значимая доля ответов «1» показывает, что для части пользователей эта функция не критична или не нужна.
