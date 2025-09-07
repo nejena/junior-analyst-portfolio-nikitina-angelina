@@ -19,8 +19,7 @@
 Демонстрация навыков: оконные функции, CTE, сложные JOIN, агрегация.
 
 ## Контакты
-- LinkedIn: 
-- Email: apvhph@gmail.com, anillimo@yandex.ru
+- Email: niki.angelina.45@gmail.com, anillimo@yandex.ru
 - Telegram: https://t.me/seele_supremacy
 
 Для более детального просмотра — клонируйте репозиторий или смотрите файлы.
