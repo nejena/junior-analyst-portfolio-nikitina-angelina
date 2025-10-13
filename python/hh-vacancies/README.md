@@ -11,4 +11,4 @@
 - API Центробанка РФ
 
 ## Запуск
-1. Запустите Jupyter Notebook: `hh-vacancies.ipynb`
+Запустите Jupyter Notebook: `hh-vacancies.ipynb`
